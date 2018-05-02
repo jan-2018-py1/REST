@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Just one user</title>
+</head>
+<body>
+    <p>Hello</p>
+    {% for person in all_person %}
+    <div>
+        {{person.id}} - {{person.full_name}} - {{person.email}} - {{person.created_at}}
+    </div>
+</body>
+</html>
