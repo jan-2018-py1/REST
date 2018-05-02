@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SHOW USERS</title>
+</head>
+<body>
+    <form action= "/users" method = "POST">
+        {% for user in all_users %}
+        <div>
+            <p>{{user.id}} - <a name = "someone" href = "{{ url_for ('display_info') }}">{{user.full_name}}</a> - {{user.email}} - {{user.created_at}}</p>
+        </div>
+        {% endfor %}
+    </form>
+</body>
+</html>
